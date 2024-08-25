@@ -5,8 +5,8 @@
     <div>
         <h1 class="text-center">Reviews APP</h1>
         <div class="d-grid gap-2 d-md-block text-center">
-            <button class="btn bg-primary text-white" type="button">Create Review</button>
-            <button class="btn bg-primary text-white" type="button">View reviews</button>
+            <button class="btn bg-button text-white" type="button">Create Review</button>
+            <button class="btn bg-button text-white" type="button">View reviews</button>
         </div>
     </div>
 </div>
