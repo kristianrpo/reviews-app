@@ -16,28 +16,28 @@
             <p> Write your review </p>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{route('review.save')}}">
+            <form method="POST" action="{{ route('review.save') }}">
                 @csrf
                 <div class="mb-3">
                     <p class="form-label"> Rating </p>
                     <div class="btn-group bg-button" role="group" aria-label="rating">
                         <input type="radio" class="btn-check" name="rating" id="rating-0" autocomplete="off" value=0>
-                        <label class="btn btn-outline-dark text-white" for="rating-0">0</label>
+                        <label class="btn btn-outline-dark text-white" for="rating-0"> 0 </label>
 
                         <input type="radio" class="btn-check" name="rating" id="rating-1" autocomplete="off" value=1>
-                        <label class="btn btn-outline-dark text-white" for="rating-1">1</label>
+                        <label class="btn btn-outline-dark text-white" for="rating-1"> 1 </label>
 
                         <input type="radio" class="btn-check" name="rating" id="rating-2" autocomplete="off" value=2>
-                        <label class="btn btn-outline-dark text-white" for="rating-2">2</label>
+                        <label class="btn btn-outline-dark text-white" for="rating-2"> 2 </label>
 
                         <input type="radio" class="btn-check" name="rating" id="rating-3" autocomplete="off" value=3>
-                        <label class="btn btn-outline-dark text-white" for="rating-3">3</label>
+                        <label class="btn btn-outline-dark text-white" for="rating-3"> 3 </label>
 
                         <input type="radio" class="btn-check" name="rating" id="rating-4" autocomplete="off" value=4>
-                        <label class="btn btn-outline-dark text-white" for="rating-4">4</label>
+                        <label class="btn btn-outline-dark text-white" for="rating-4"> 4 </label>
 
                         <input type="radio" class="btn-check" name="rating" id="rating-5" autocomplete="off" value=5>
-                        <label class="btn btn-outline-dark text-white" for="rating-5">5</label>
+                        <label class="btn btn-outline-dark text-white" for="rating-5"> 5 </label>
                     </div>
                 </div>
                 <div class="mb-3">

@@ -18,7 +18,7 @@ class ReviewController extends Controller
         return view('review.index')->with('viewData', $viewData);
     }
 
-    public function show($id): View
+    public function show(int $id): View
     {
         $viewData = [];
         $review = Review::findOrFail($id);
@@ -45,7 +45,7 @@ class ReviewController extends Controller
         return view('review.save');
     }
 
-    public function delete($id): RedirectResponse
+    public function delete(int $id): RedirectResponse
     {
         $review = Review::findOrFail($id);
         $review->delete();
