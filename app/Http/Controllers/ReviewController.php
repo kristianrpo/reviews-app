@@ -11,9 +11,19 @@ class ReviewController extends Controller
     public function index(): View
     {
         $viewData = [];
-        $viewData['reviews'] = Review::all();
+        $reviews = Review::all();
+        $viewData['reviews'] = $reviews;
 
         return view('review.index')->with('viewData', $viewData);
+    }
+
+    public function show($id): View
+    {
+        $viewData = [];
+        $review = Review::findOrFail($id);
+        $viewData['review'] = $review;
+
+        return view('review.show')->with('viewData', $viewData);
     }
 
     public function create(): View

@@ -11,7 +11,8 @@
                 <span> - </span>
                 <span class="ml-3"> {{ $review->getTitle() }} </span>
             </div>
-            <a href="#" class="btn bg-button btn-sm text-white"> Show review </a>
+            <a href="{{ route('review.show', ['id' => $review->getId()]) }}" class="btn bg-button btn-sm text-white">
+                Show review </a>
         </li>
         @endforeach
     </ul>
