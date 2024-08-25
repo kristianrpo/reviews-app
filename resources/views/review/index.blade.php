@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'List reviews')
+@section('title', 'Reviews')
 @section('content')
 <div class="container mt-5">
     <h1 class="text-center mb-4"> Reviews </h1>

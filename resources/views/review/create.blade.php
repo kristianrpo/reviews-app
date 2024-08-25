@@ -46,8 +46,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label"> Description </label>
-                    <input type="text" class="form-control" id="description" name="description"
-                        value="{{ old('description') }}">
+                    <textarea type="text" class="form-control" id="description" name="description"
+                        rows="3">{{ old('description') }}</textarea>
                 </div>
                 <button type="submit" class="btn bg-button text-white"> Submit </button>
             </form>

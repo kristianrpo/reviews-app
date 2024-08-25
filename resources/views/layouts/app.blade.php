@@ -24,7 +24,7 @@
                         <a class="nav-link" href="{{ route('review.create') }}"> Create review </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('review.index') }}"> List Reviews </a>
+                        <a class="nav-link" href="{{ route('review.index') }}"> View reviews </a>
                     </li>
                 </ul>
             </div>
