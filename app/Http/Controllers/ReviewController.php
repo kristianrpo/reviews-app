@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Review;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -42,5 +43,13 @@ class ReviewController extends Controller
         Review::create($request->only(['rating', 'title', 'description']));
 
         return view('review.save');
+    }
+
+    public function delete($id): RedirectResponse
+    {
+        $review = Review::findOrFail($id);
+        $review->delete();
+
+        return redirect()->route('review.index');
     }
 }

@@ -7,3 +7,4 @@ Route::get('/reviews', 'App\Http\Controllers\ReviewController@index')->name('rev
 Route::get('/reviews/create', 'App\Http\Controllers\ReviewController@create')->name('review.create');
 Route::post('/reviews/save', 'App\Http\Controllers\ReviewController@save')->name('review.save');
 Route::get('/reviews/{id}', 'App\Http\Controllers\ReviewController@show')->name('review.show');
+Route::delete('/reviews/delete/{id}', 'App\Http\Controllers\ReviewController@delete')->name('review.delete');
