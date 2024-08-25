@@ -32,7 +32,7 @@ class ReviewController extends Controller
         return view('review.create');
     }
 
-    public function save(Request $request): View
+    public function store(Request $request): View
     {
         $request->validate([
             'rating' => 'required|integer',
@@ -42,10 +42,10 @@ class ReviewController extends Controller
 
         Review::create($request->only(['rating', 'title', 'description']));
 
-        return view('review.save');
+        return view('review.store');
     }
 
-    public function delete(int $id): RedirectResponse
+    public function destroy(int $id): RedirectResponse
     {
         $review = Review::findOrFail($id);
         $review->delete();

@@ -16,7 +16,7 @@
             <p> Write your review </p>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ route('review.save') }}">
+            <form method="POST" action="{{ route('review.store') }}">
                 @csrf
                 <div class="mb-3">
                     <p class="form-label"> Rating </p>

@@ -13,7 +13,7 @@
             <p class="card-text"><strong> Description: </strong> {{ $viewData['review']->getDescription() }} </p>
             <div class="d-flex align-items-center">
                 <a href="{{ route('review.index') }}" class="btn bg-button text-white mx-2"> Go back </a>
-                <form method="POST" action="{{ route('review.delete', ['id' => $viewData['review']->getId()]) }}"
+                <form method="POST" action="{{ route('review.destroy', ['id' => $viewData['review']->getId()]) }}"
                     class="form-inline">
                     @csrf
                     @method('DELETE')
