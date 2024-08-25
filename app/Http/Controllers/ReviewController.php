@@ -34,12 +34,7 @@ class ReviewController extends Controller
 
     public function store(Request $request): View
     {
-        $request->validate([
-            'rating' => 'required|integer',
-            'title' => 'required|string|max:100',
-            'description' => 'required|string|max:500',
-        ]);
-
+        Review::validate($request);
         Review::create($request->only(['rating', 'title', 'description']));
 
         return view('review.store');

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class Review extends Model
 {
@@ -14,6 +15,15 @@ class Review extends Model
      * $this->attributes['description'] - string - contains the review description
      */
     protected $fillable = ['rating', 'title', 'description'];
+
+    public static function validate(Request $request): void
+    {
+        $request->validate([
+            'rating' => 'required|integer',
+            'title' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
+        ]);
+    }
 
     public function getId(): int
     {
