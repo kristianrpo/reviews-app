@@ -8,6 +8,14 @@ use Illuminate\View\View;
 
 class ReviewController extends Controller
 {
+    public function index(): View
+    {
+        $viewData = [];
+        $viewData['reviews'] = Review::all();
+
+        return view('review.index')->with('viewData', $viewData);
+    }
+
     public function create(): View
     {
         return view('review.create');
