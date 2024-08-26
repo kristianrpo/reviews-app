@@ -64,4 +64,24 @@ class Review extends Model
     {
         $this->attributes['description'] = $description;
     }
+
+    public function getCreatedAt(): string
+    {
+        return $this->attributes['created_at'];
+    }
+
+    public function setCreatedAt(mixed $createdAt): void
+    {
+        $this->attributes['created_at'] = $createdAt;
+    }
+
+    public function getUpdatedAt(): string
+    {
+        return $this->attributes['updated_at'];
+    }
+
+    public function setUpdatedAt(mixed $updatedAt): void
+    {
+        $this->attributes['updated_at'] = $updatedAt;
+    }
 }
