@@ -65,7 +65,7 @@ class Review extends Model
         $this->attributes['description'] = $description;
     }
 
-    public function getCreatedAt(): string
+    public function getCreatedAt(): mixed
     {
         return $this->attributes['created_at'];
     }
@@ -75,7 +75,7 @@ class Review extends Model
         $this->attributes['created_at'] = $createdAt;
     }
 
-    public function getUpdatedAt(): string
+    public function getUpdatedAt(): mixed
     {
         return $this->attributes['updated_at'];
     }
