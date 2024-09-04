@@ -13,6 +13,8 @@ class Review extends Model
      * $this->attributes['rating'] - int - contains the review rating
      * $this->attributes['title'] - string - contains the review title
      * $this->attributes['description'] - string - contains the review description
+     * $this->attributes['created_at'] - string - contains the review creation date
+     * $this->attributes['updated_at'] - string - contains the review update date
      */
     protected $fillable = ['rating', 'title', 'description'];
 
@@ -28,11 +30,6 @@ class Review extends Model
     public function getId(): int
     {
         return $this->attributes['id'];
-    }
-
-    public function setId(int $id): void
-    {
-        $this->attributes['id'] = $id;
     }
 
     public function getRating(): int
@@ -65,23 +62,14 @@ class Review extends Model
         $this->attributes['description'] = $description;
     }
 
-    public function getCreatedAt(): mixed
+    public function getCreatedAt(): string
     {
         return $this->attributes['created_at'];
     }
 
-    public function setCreatedAt(mixed $createdAt): void
-    {
-        $this->attributes['created_at'] = $createdAt;
-    }
-
-    public function getUpdatedAt(): mixed
+    public function getUpdatedAt(): string
     {
         return $this->attributes['updated_at'];
     }
 
-    public function setUpdatedAt(mixed $updatedAt): void
-    {
-        $this->attributes['updated_at'] = $updatedAt;
-    }
 }
